@@ -163,6 +163,7 @@ Value treat_value(char* val) {
     return result;
 }
 
+// TODO: Add matrtching float and strings logiv when necessary
 void push_setting(Value* value, MapEntry* field, Settings* settings) {
     for (size_t i = 0; i < SIZEOF_ISETTINGS; i++) {
         if (strcmp(field->key, int_settings[i].key) == 0) {
