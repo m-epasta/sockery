@@ -1,0 +1,24 @@
+default: build
+
+PROJECT_NAME := "sockery"
+
+build:
+    #!/usr/bin/env bash
+    mkdir -p artifacts
+    set -eux
+    gcd {{PROJECT_NAME}}
+    mkdir -p build
+    cd build
+    cmake ..
+    cmake --build .
+    cp {{PROJECT_NAME}} ../artifacts/
+
+distclean:
+    rm -rf build
+    rm -rf {{PROJECT_NAME}}
+    rm -rf release
+    rm -rf artifacts/
+
+release:
+    mkdir -p artifacts
+    v run scripts/release.vsh
