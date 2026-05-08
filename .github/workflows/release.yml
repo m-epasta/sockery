@@ -9,7 +9,6 @@ jobs:
       - uses: actions/checkout@v6
       - name: install V
         run: |
-          sudo apt-get update
           sudo apt install git wget
           git clone --depth=1 https://github.com/vlang/v
           cd v

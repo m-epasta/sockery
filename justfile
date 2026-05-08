@@ -34,3 +34,6 @@ actions-build:
 
 download-assets:
     v run scripts/download_assets.vsh
+
+fill-assets:
+    v run scripts/fill_csv.vsh
