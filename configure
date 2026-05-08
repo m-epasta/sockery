@@ -4,3 +4,6 @@ set -e
 
 sudo apt-get update
 sudo apt install libgtk-4-1 libgtk-4-dev gtk-4-examples
+
+# Install just
+sudo apt install just
