@@ -31,3 +31,6 @@ actions-build:
     cmake ..
     cmake --build .
     cp {{PROJECT_NAME}} ../artifacts/
+
+download-assets:
+    v run scripts/download_assets.vsh
