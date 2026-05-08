@@ -1,3 +1,5 @@
+#! /bin/bash
+# This file is intended for github workflows that runs on ubuntu machines. You can use this script only on linux distros that has apt as its package manager
 set -e
 
-apt install libgtk-4-1 libgtk-4-dev gtk-4-examples
+sudo apt install libgtk-4-1 libgtk-4-dev gtk-4-examples
