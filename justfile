@@ -22,3 +22,12 @@ distclean:
 release:
     mkdir -p artifacts
     v run scripts/release.vsh
+
+actions-build:
+    #!/usr/bin/env bash
+    set -eux
+    mkdir -p build
+    cd build
+    cmake ..
+    cmake --build .
+    cp {{PROJECT_NAME}} ../artifacts/
