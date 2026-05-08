@@ -9,11 +9,11 @@ jobs:
       - uses: actions/checkout@v6
       - name: install V
         run: |
-          sudo apt install git wget gcc make
+          sudo apt install -y git wget gcc make
           git clone --depth=1 https://github.com/vlang/v
           cd v
           make
-          sudo make install
+          sudo ./v symlink
 
       # Use the same config script as ci.yml
       - name: configure
