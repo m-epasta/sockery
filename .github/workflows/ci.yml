@@ -1,0 +1,17 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: configure
+        run: ./configure
+      - name: make
+        run: just
+      - name: output mem leaks
+        run: valgrind --leaks-check=full -s ./artifacts/sockery
+      - name: clean
+        run: just distclean
